@@ -25,7 +25,7 @@ const education = [
     degree: 'Bachelor of Technology in Computer Science',
     school: 'Your University',
     year: '2022 - 2026',
-    percentage: 'CGPA: 8.5',
+    percentage: 'CGPA: 7.5',
     description: 'Currently pursuing B.Tech in Computer Science and Engineering.',
   },
 ];

@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { contactAPI } from '../services/api';
+import emailjs from 'emailjs-com';
 import './Contact.css';
+
+// EmailJS Configuration - Replace these with your own credentials
+// Get them from https://www.emailjs.com/
+const EMAILJS_SERVICE_ID = 'service_pzesicf';
+const EMAILJS_TEMPLATE_ID = 'template_b93ou3i';
+const EMAILJS_PUBLIC_KEY = '1md3AKYL4pZ4f5ZCy';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -89,11 +95,28 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      await contactAPI.create(formData);
+      // Send email using EmailJS (without backend)
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      setStatus({ type: 'error', message: error.response?.data?.message || 'Failed to send message' });
+      // Show more detailed error message
+      const errorMsg = error.text || error.message || 'Failed to send message. Please try again.';
+      setStatus({ type: 'error', message: errorMsg });
+      console.error('EmailJS Error:', error);
     } finally {
       setLoading(false);
     }

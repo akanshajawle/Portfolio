@@ -123,40 +123,32 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="social-links">
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                title={social.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
+          <div className="social-links-container">
+            <div className="social-links">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  title={social.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </div>
+            <div className="availability-badge">
+              <span className="availability-dot"></span>
+              <span className="availability-text">Available for work</span>
+            </div>
           </div>
 
-          {/* <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">1</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">4+</span>
-              <span className="stat-label">Projects Completed</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Happy Clients</span>
-            </div>
-          </div> */}
         </motion.div>
 
         <motion.div 
