@@ -16,7 +16,7 @@ const projects = [
     description: "Full Stack Developer Portfolio – Showcasing projects and skills in web and mobile development, including React, Node.js, and database management, with a focus on creating impactful, real-world applications.",
     image: "/Portfolio.png",
     githubUrl: "https://github.com/akanshajawle/portfolio",
-    liveUrl: "https://akansha-jawle.vercel.app",
+    liveUrl: "https://akansha-jawle.vercel.app/",
   },
   {
     id: 3,
