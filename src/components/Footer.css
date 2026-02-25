@@ -79,6 +79,44 @@
   padding-top: 2rem;
   text-align: center;
   color: #a0a0b0;
+  position: relative;
+}
+
+/* Scroll to Top Arrow */
+.scroll-to-top {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    position: relative;
+    margin-top: 1.5rem;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 @media (max-width: 768px) {
