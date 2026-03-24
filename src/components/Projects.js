@@ -7,8 +7,8 @@ const projects = [
     title: "Nourish Together",
     description: "A platform dedicated to fighting hunger and reducing food waste. It connects food donors, like restaurants, with people in need, enabling easy sharing and distribution of surplus food.",
     image: "/NourishTogether.png",
-    githubUrl: "https://github.com/Nikitadhotre/Nourish_Together",
-    liveUrl: "https://nourish-together.vercel.app",
+    githubUrl: "https://github.com/akanshajawle/Nourish-Together",
+    liveUrl: "https://nourish-together-chi.vercel.app",
   },
   {
     id: 2,
