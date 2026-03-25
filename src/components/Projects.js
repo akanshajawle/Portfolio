@@ -26,14 +26,14 @@ const projects = [
     githubUrl: "https://github.com/akansha-jawle/vidhanverse",
     liveUrl: "https://vidhanverse.app",
   },
-  {
-    id: 4,
-    title: "SplitBill",
-    description: "A mobile application for splitting bills and managing expenses with friends and groups. Features include expense tracking, settlement calculations, and group management.",
-    image: "/VidhanVerse.jpg",
-    githubUrl: "https://github.com/akansha-jawle/splitbill",
-    liveUrl: "https://splitbill.app",
-  },
+  // {
+  //   id: 4,
+  //   title: "SplitBill",
+  //   description: "A mobile application for splitting bills and managing expenses with friends and groups. Features include expense tracking, settlement calculations, and group management.",
+  //   image: "/VidhanVerse.jpg",
+  //   githubUrl: "https://github.com/akansha-jawle/splitbill",
+  //   liveUrl: "https://splitbill.app",
+  // },
 ];
 
 // Inline SVGs with color adaptivity
