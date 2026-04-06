@@ -17,7 +17,7 @@ const education = [
     degree: 'Higher Secondary Certificate (12th)',
     school: 'Vivekanand College',
     year: '2021 - 2022',
-    percentage: '92%',
+    percentage: '70.17',
     description: 'Completed 12th standard in Science stream with Physics, Chemistry, Biology, and Mathematics.',
   },
   {
